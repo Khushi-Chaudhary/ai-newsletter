@@ -1,4 +1,4 @@
-users = [
+USER_PROFILES = [
     {
         "name": "Alex Parker",
         "interests": ["AI", "cybersecurity", "blockchain", "startups", "programming"],
