@@ -1,4 +1,3 @@
-# app.py
 import streamlit as st
 from newsletter_generator import generate_newsletter
 from user_profiles import USER_PROFILES
@@ -21,8 +20,11 @@ selected_profile = next((profile for profile in USER_PROFILES if profile["name"]
 # Add a generate button
 if st.button("Generate Newsletter"):
     if selected_profile:
-        newsletter = generate_newsletter(selected_profile)
+        # Generate the newsletter
+        newsletter_content, _ = generate_newsletter(selected_profile)
+        
+        # Display the content
         st.markdown("### 📬 Here's your personalized newsletter:")
-        st.write(newsletter)
+        st.markdown(newsletter_content)  # Use st.markdown to render the markdown format
     else:
         st.error("⚠️ Could not find the selected persona.")
