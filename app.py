@@ -8,4 +8,4 @@ st.set_page_config(page_title="AI Newsletter Generator", layout="centered")
 st.title("🧠 AI-Powered Personalized Newsletter Generator")
 
 # Dropdown for persona
-persona = st.selectbox("Choose a user persona:", list
+persona = st.selectbox("Choose a user persona:"), list
